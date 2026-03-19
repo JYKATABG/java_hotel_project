@@ -1,18 +1,70 @@
+# 🏨 Hotel Management System
+
+A student project for hotel management with CRUD operations, built with pure Java, Swing and H2 database.
+
+## Technologies
+
+- Java 21
+- H2 Database (in-memory)
+- Java Swing
+
+## Features
+
+- Room type management
+- Room management
+- Guest management
+- Reservation management
+- Search and filtering
+
+## Requirements
+
+- Java JDK 21+
+
 ## Getting Started
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+### 1. Clone the repository
+```
+git clone <url>
+```
 
-## Folder Structure
+### 2. Download the required library and place it in the `lib/` folder
 
-The workspace contains two folders by default, where:
+| Library | Download |
+|---|---|
+| H2 Database | https://repo1.maven.org/maven2/com/h2database/h2/2.2.224/h2-2.2.224.jar |
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+### 3. Run the project
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+Open the project in VS Code or IntelliJ and run `App.java`
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+> The database is created automatically on every startup — no additional configuration needed.
 
-## Dependency Management
+## Project Structure
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+```
+src/
+├── resources/
+│   └── schema.sql            ← database structure and initial data
+├── db/
+│   └── DatabaseManager.java  ← database connection
+├── dao/                      ← CRUD operations
+├── ui/                       ← Swing components
+└── App.java
+```
+
+## Database Schema
+
+The project uses an H2 in-memory database with 4 tables:
+
+- `room_types` — room categories with pricing
+- `rooms` — individual rooms with status
+- `guests` — guest information
+- `reservations` — booking records
+
+## Team
+
+| Name | Role |
+|---|---|
+| Христо Балев| Database |
+| Жулиян Маринов | Java UI |
+| Георги Цанев | Java UI |
