@@ -9,7 +9,7 @@ public class RoomType {
     public RoomType() {
     };
 
-    RoomType(int id, String typeName, int capacity, double pricePerNight) {
+    public RoomType(int id, String typeName, int capacity, double pricePerNight) {
         this.id = id;
         this.typeName = typeName;
         this.capacity = capacity;
